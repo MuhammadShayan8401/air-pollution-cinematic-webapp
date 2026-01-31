@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<title>U.S. Air Pollution Dashboard (2010–2023)</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #f7f7f7; padding: 20px; }
+h1 { text-align: center; color: #333; }
+h2 { color: #004080; }
+section { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; background: #fff; border-radius: 8px; }
+iframe { border: none; }
+#toc { background: #e0f0ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+#toc a { text-decoration: none; color: #004080; display: block; margin: 5px 0; }
+.collapsible { background-color: #007acc; color: white; cursor: pointer; padding: 10px; width: 100%; border: none; text-align: left; outline: none; font-size: 16px; border-radius: 5px; margin-bottom: 5px; }
+.active, .collapsible:hover { background-color: #005f99; }
+.content { padding: 0 15px; display: none; overflow: hidden; background-color: #f9f9f9; border-radius: 5px; margin-bottom: 10px; }
+img { max-width: 100%; border-radius: 5px; }
+</style>
+</head>
+<body>
+<h1>U.S. Air Pollution Dashboard (2010–2023)</h1>
+<div id="toc">
+<h2>Table of Contents</h2>
+<a href="#Top_10_States_by_NO2_MEAN_(2016)">Top 10 States by NO2_MEAN (2016)</a>
+<a href="#Top_10_States_by_O3_MEAN_(2016)">Top 10 States by O3_MEAN (2016)</a>
+<a href="#Top_10_States_by_SO2_MEAN_(2016)">Top 10 States by SO2_MEAN (2016)</a>
+<a href="#Top_10_States_by_CO_MEAN_(2016)">Top 10 States by CO_MEAN (2016)</a>
+<a href="#Yearly_Average_Pollutant_Trends">Yearly Average Pollutant Trends</a>
+<a href="#Correlation_Between_Pollutants">Correlation Between Pollutants</a>
+<a href="#Average_Monthly_Pollutant_Trends">Average Monthly Pollutant Trends</a>
+<a href="#NO₂_Concentrations_by_State_(Interactive)">NO₂ Concentrations by State (Interactive)</a>
+<a href="#Animated_NO2_MEAN_by_State">Animated NO2_MEAN by State</a>
+<a href="#Animated_O3_MEAN_by_State">Animated O3_MEAN by State</a>
+<a href="#Animated_SO2_MEAN_by_State">Animated SO2_MEAN by State</a>
+<a href="#Animated_CO_MEAN_by_State">Animated CO_MEAN by State</a>
+</div>
+<section id="Top_10_States_by_NO2_MEAN_(2016)"><button type="button" class="collapsible">Top 10 States by NO2_MEAN (2016)</button><div class="content"><img src="top10_no2_mean_states.png"></div></section>
+<section id="Top_10_States_by_O3_MEAN_(2016)"><button type="button" class="collapsible">Top 10 States by O3_MEAN (2016)</button><div class="content"><img src="top10_o3_mean_states.png"></div></section>
+<section id="Top_10_States_by_SO2_MEAN_(2016)"><button type="button" class="collapsible">Top 10 States by SO2_MEAN (2016)</button><div class="content"><img src="top10_so2_mean_states.png"></div></section>
+<section id="Top_10_States_by_CO_MEAN_(2016)"><button type="button" class="collapsible">Top 10 States by CO_MEAN (2016)</button><div class="content"><img src="top10_co_mean_states.png"></div></section>
+<section id="Yearly_Average_Pollutant_Trends"><button type="button" class="collapsible">Yearly Average Pollutant Trends</button><div class="content"><img src="yearly_trends.png"></div></section>
+<section id="Correlation_Between_Pollutants"><button type="button" class="collapsible">Correlation Between Pollutants</button><div class="content"><img src="pollutant_correlation.png"></div></section>
+<section id="Average_Monthly_Pollutant_Trends"><button type="button" class="collapsible">Average Monthly Pollutant Trends</button><div class="content"><img src="monthly_trends.png"></div></section>
+<section id="NO₂_Concentrations_by_State_(Interactive)"><button type="button" class="collapsible">NO₂ Concentrations by State (Interactive)</button><div class="content"><iframe src="choropleth_no2_states_2016.html" width="100%" height="500px"></iframe></div></section>
+<section id="Animated_NO2_MEAN_by_State"><button type="button" class="collapsible">Animated NO2_MEAN by State</button><div class="content"><img src="animated_no2_mean.gif"></div></section>
+<section id="Animated_O3_MEAN_by_State"><button type="button" class="collapsible">Animated O3_MEAN by State</button><div class="content"><img src="animated_o3_mean.gif"></div></section>
+<section id="Animated_SO2_MEAN_by_State"><button type="button" class="collapsible">Animated SO2_MEAN by State</button><div class="content"><img src="animated_so2_mean.gif"></div></section>
+<section id="Animated_CO_MEAN_by_State"><button type="button" class="collapsible">Animated CO_MEAN by State</button><div class="content"><img src="animated_co_mean.gif"></div></section>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") { content.style.display = "none"; }
+    else { content.style.display = "block"; }
+  });
+}
+</script>
+</body></html>
